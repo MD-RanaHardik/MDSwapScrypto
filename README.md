@@ -11,7 +11,7 @@
 
   [Radix Wallet Installation and Usage :: Radix Documentation (radixdlt.com)](https://docs-babylon.radixdlt.com/main/getting-started-developers/wallet/wallet-and-connecter-installation.html)
 	
-  #### Apply for tester to get android app
+  #### Apply for tester to get android app of radix wallet
   
   [android wallet - temporary form (typeform.com)](https://radixdlt.typeform.com/to/I5GMUSF2?typeform-source=www.google.com)
 
