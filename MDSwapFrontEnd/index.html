@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MDSwap</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-950">
+
+  <div class="flex justify-between">
+    <div class="flex ml-3">
+      <img src="./public/Logo.png" alt="not found" class="my-auto h-14 w-14">
+
+      <h1 class="text-2xl font-bold text-cyan-200 my-auto ml-1">MD<h1 class="text-2xl font-bold  my-auto text-pink-500">
+          Swap</h1>
+      </h1>
+    </div>
+
+    <radix-connect-button class="my-3 mr-10 border border-white rounded-xl hover:bg-blue-900" />
+
+  </div>
+
+  <div class="bg-slate-800 backdrop-blur-md w-2/5 p-8 rounded-2xl mx-auto my-16 shadow-sm shadow-cyan-200">
+    <h1 class="text-white font-bold text-3xl pb-5">Swap</h1>
+
+    <select name="Coins" id="Coins" class="bg-transparent text-white font-semibold">
+      <option value="NotSelected" class="bg-slate-500 ">Select coin to put</option>
+      <option value="CoinA" class="bg-slate-500 ">CoinA</option>
+      <option value="CoinB" class="bg-slate-500 ">CoinB</option>
+    </select>
+    <br>
+    <input type="number" step="any" name="coinAinput" id="coinAinput" value="0.0"
+      class="text-xl bg-slate-700 w-full text-white rounded-xl border border-slate-400 px-3 py-4 mt-3">
+    <select name="Coins2" id="Coins2"
+      class="bg-slate-700 w-full text-white font-semibold py-4 px-3 rounded-xl border border-slate-400 mt-5">
+      <option value="NotSelected" class="bg-slate-500 ">Select coin to take</option>
+
+    </select>  
+    <button id="swapbtn" class="flex justify-center disabled:bg-slate-700 bg-cyan-200 w-full font-bold text-xl py-2 mt-5 rounded-lg hover:bg-cyan-300">Swap</button>
+    
+
+    <p id="msg" class="text-cyan-200 text-center p-2" ></p>
+  </div>
+
+  <!-- <div class="grid grid-cols-2">
+          <div class="shadow-slate-400 drop-shadow-lg bg-slate-100 p-5 mx-10 my-10">
+            <p id="accountName" class="font-semibold p-1">Account Name :</p>
+            <p id="accountAddress" class="font-semibold p-1">Account Address :</p>
+            <p id="priceA" class="font-semibold p-1">Price of coin A :</p>
+            <p id="priceB" class="font-semibold p-1">Price of coinB :</p>
+            <p id="lptoken" class="font-semibold p-1">Lp Tokens :</p>
+            <br>
+            <button id="getPriceA" class="bg-blue-500 py-2 px-3 text-white font-semibold rounded-md hover:bg-blue-600">Get Coin A</button>
+            <button id="getPriceB" class="bg-blue-500 py-2 px-3 text-white font-semibold rounded-md hover:bg-blue-600">Get Coin B</button>
+            <button id="getLpToken" class="bg-blue-500 py-2 px-3 text-white font-semibold rounded-md hover:bg-blue-600">Get LP Token</button>
+            <button id="swap" class="bg-blue-500 py-2 px-3 text-white font-semibold rounded-md hover:bg-blue-600">Swap</button>
+          </div>
+    </div> -->
+
+
+
+
+  <!-- <button id="instantiateComponent">Instantiate Component</button>
+  <br> -->
+
+
+
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  
+  <script type="module" src="/swap.js"></script>
+<!-- 
+  <script>
+
+    let coins1selection = document.getElementById("Coins");
+    let coins2selection = document.getElementById("Coins2");
+    let swapbtn = document.getElementById("swapbtn");
+    let coinAinput = document.getElementById("coinAinput");
+    let msg = document.getElementById("msg");
+    
+
+    coins1selection.addEventListener("change", (e) => {
+     
+      if (e.target.value == "CoinA") {
+
+        coins2selection.innerHTML = `
+            <option value="NotSelected" class="bg-slate-500 ">Select coin to take</option>
+             <option value="CoinB" class="bg-slate-500 ">CoinB</option>
+            `
+
+      }else if(e.target.value == "CoinB"){
+
+        coins2selection.innerHTML = `
+            <option value="NotSelected" class="bg-slate-500 ">Select coin to take</option>
+             <option value="CoinA" class="bg-slate-500 ">CoinA</option>`
+      }
+
+    })
+
+    swapbtn.addEventListener("click",async (e)=>{
+       
+      if(coins1selection.value != "NotSelected" && coins2selection.value != "NotSelected" && coinAinput.value != "0.0" )
+      {
+
+      
+        swapbtn.innerHTML = `Swap <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_EYReHf.json"  background="transparent"  speed="1" class="h-7 w-7 ml-3"  loop  autoplay></lottie-player>`;
+        swapbtn.disabled = true;
+        await SwapCoin(coins1selection.value,coinAinput.value);
+        swapbtn.innerHTML = `Swap`;
+        swapbtn.disabled = false;
+
+      }else{
+       
+        msg.innerText = "Please fill valid input to swap";
+        
+      }
+      
+    })
+
+  </script> -->
+
+</body>
+
+</html>
